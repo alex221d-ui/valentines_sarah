@@ -1,0 +1,101 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Sarah 💖</title>  
+    <style>  
+        body {  
+            text-align: center;  
+            font-family: Arial, sans-serif;  
+            background: linear-gradient(to right, #ffdde1, #ee9ca7);  
+            margin: 0;  
+            padding: 0;  
+            display: flex;  
+            flex-direction: column;  
+            justify-content: center;  
+            height: 100vh;  
+        }  
+  
+        h1 {  
+            font-size: 2.5em;  
+            margin: 0.5em;  
+        }  
+  
+        h2 {  
+            font-size: 1.5em;  
+            margin: 0.5em;  
+        }  
+  
+        button {  
+            padding: 15px 30px;  
+            font-size: 1.2em;  
+            margin: 15px;  
+            cursor: pointer;  
+            border: none;  
+            border-radius: 10px;  
+            transition: 0.3s;  
+        }  
+  
+        #yesBtn {  
+            background-color: #ff4d6d;  
+            color: white;  
+        }  
+  
+        #noBtn {  
+            background-color: #777;  
+            color: white;  
+        }  
+  
+        #message {  
+            font-size: 1.2em;  
+            margin-top: 20px;  
+            color: #333;  
+        }  
+    </style>  
+</head>  
+<body>  
+  
+    <h1>Sarah 💕</h1>  
+    <h2>Will you be my Valentine?</h2>  
+  
+    <button id="yesBtn">Yes ❤️</button>  
+    <button id="noBtn">No 😢</button>  
+  
+    <p id="message"></p>  
+  
+    <script>  
+        let yesBtn = document.getElementById("yesBtn");  
+        let noBtn = document.getElementById("noBtn");  
+        let message = document.getElementById("message");  
+  
+        let size = 20; // initial font size for Yes button  
+        let clickCount = 0;  
+  
+        noBtn.addEventListener("click", function() {  
+            clickCount++;  
+            size += 15;  
+            yesBtn.style.fontSize = size + "px";  
+  
+            if (clickCount === 1) {  
+                message.innerHTML = "Sarah… are you sure? 🥺";  
+            } else if (clickCount === 2) {  
+                message.innerHTML = "I really think you meant to press Yes 😭";  
+            } else if (clickCount === 3) {  
+                message.innerHTML = "This is getting awkward now 💀";  
+            } else {  
+                message.innerHTML = "Just press Yes Sarah 😂❤️";  
+            }  
+        });  
+  
+        yesBtn.addEventListener("click", function() {  
+            document.body.innerHTML = `  
+                <h1>YESSSS SARAH ❤️❤️❤️</h1>  
+                <h2>You just made me the happiest person alive 🥰</h2>  
+                <h3>I can't wait for our Valentine’s date 💕</h3>  
+            `;  
+        });  
+    </script>  
+  
+</body>  
+</html>  
